@@ -1,8 +1,5 @@
-import * as fcl from "@onflow/fcl"
+import * as web3 from "@portto/solana-web3"
 
-fcl.config()
-  // .put("accessNode.api", "http://localhost:8080") // local Flow emulator
-  // .put("challenge.handshake", "http://localhost:8702/authn") // local dev wallet
+web3.config()
   .put("challenge.scope", "email") // request for Email
-  .put("accessNode.api", "https://access-testnet.onflow.org") // Flow testnet
-  .put("challenge.handshake", "https://flow-wallet-testnet.blocto.app/authn") // Blocto testnet wallet
+  .put("challenge.handshake", "https://wallet-testnet.blocto.app/solana/authn") // Blocto testnet wallet

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import * as fcl from "@onflow/fcl"
+import * as web3 from "@portto/solana-web3"
 
 import Card from '../components/Card'
 import Header from '../components/Header'
@@ -9,7 +9,7 @@ const UserInfo = () => {
   const [user, setUser] = useState(null)
 
   useEffect(() =>
-    fcl
+    web3
       .currentUser()
       .subscribe(user => setUser({...user}))
   , [])

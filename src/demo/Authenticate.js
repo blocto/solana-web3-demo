@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import * as fcl from "@onflow/fcl"
+import * as web3 from "@portto/solana-web3"
 
 import Card from '../components/Card'
 
@@ -8,9 +8,9 @@ const SignInOutButton = ({ user: { loggedIn } }) => {
     event.preventDefault()
 
     if (loggedIn) {
-      fcl.unauthenticate()
+      web3.disable()
     } else {
-      fcl.authenticate()
+      web3.enable()
     }
   }
 
@@ -25,7 +25,7 @@ const CurrentUser = () => {
   const [user, setUser] = useState({})
 
   useEffect(() =>
-    fcl
+    web3
       .currentUser()
       .subscribe(user => setUser({...user}))
   , [])
