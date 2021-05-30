@@ -16,5 +16,5 @@ Run `yarn start` at project root and you will see the demo webapp running at `ht
 ## Diving into Demo
 All the demo cases are located in `./src/demo`. Each component is responsible for one example interaction with Solana. 
 
-- **Authenticate**: Handles sign in/out logic with FCL wallet
-- **UserInfo**: Subscribes to `fcl.currentUser()` and shows the connected user account information
+- **Authenticate**: Handles sign in/out logic with Blocto Solana wallet
+- **UserInfo**: Subscribes to `web3.currentUser()` and shows the connected user account information
